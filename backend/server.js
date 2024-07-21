@@ -2,10 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import userRoutes from "./routes/user.route.js";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
-
+app.use(cors());
 // db connection
 mongoose
   .connect(process.env.DB_URI)
