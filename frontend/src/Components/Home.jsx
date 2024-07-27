@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Home() {
+  const [userData, setUserData] = useState([]);
+  // console.log(userData);
+  useEffect(() => {
+    const fetchAllUser = async () => {
+      try {
+        const res = await axios.get(
+          "http://localhost:3000/api/v1/user/getallusers"
+        );
+        // console.log(res.data)
+        setUserData(res.data.users);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchAllUser();
+  }, []);
+
   return (
     <>
       <div className="p-4 md:w-1/2 mx-auto mt-3">
@@ -71,41 +89,49 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  1
-                </th>
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  Karan{" "}
-                </th>
-                <td className="px-6 py-4">kar@gmail.com</td>
-                <td className="px-6 py-4">hbdu32324</td>
-                <td className="px-6 py-4">
-                  <div className="flex gap-4 justify-center">
-                    <Link
-                      to={`/`}
-                      className="font-medium text-green-600 dark:text-blue-500 hover:underline"
+              {userData.length > 0 ? (
+                userData.map((user, idx) => (
+                  <tr
+                    key={idx}
+                    className="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+                  >
+                    <th
+                      scope="row"
+                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
-                      Read
-                    </Link>
-                    <Link
-                      to={`/`}
-                      className="font-medium text-yellow-400 dark:text-blue-500 hover:underline"
-                    >
-                      Edit
-                    </Link>
-                    <button className="font-medium text-red-500 hover:underline">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
+                      {idx + 1}
+                    </th>
+                    <td className="px-6 py-4">{user.name}</td>
+                    <td className="px-6 py-4">{user.email}</td>
+                    <td className="px-6 py-4">{user.password}</td>
+                    <td className="px-6 py-4">
+                      <div className="flex gap-4 justify-center">
+                        <Link
+                          to={`/`}
+                          className="font-medium text-green-600 dark:text-blue-500 hover:underline"
+                        >
+                          Read
+                        </Link>
+                        <Link
+                          to={`/`}
+                          className="font-medium text-yellow-400 dark:text-blue-500 hover:underline"
+                        >
+                          Edit
+                        </Link>
+                        <button className="font-medium text-red-500 hover:underline">
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="5" className="px-6 py-4">
+                    No users found.
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>
