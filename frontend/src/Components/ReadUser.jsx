@@ -21,7 +21,7 @@ const ReadUser = () => {
   }, []);
   return (
     <>
-      <div className="p-4 md:w-1/2 mx-auto mt-3">
+      <div className="p-4 md:w-full mx-auto mt-3">
         <div className="relative overflow-x-auto shadow-md rounded-md">
           <table className="w-full text-lg text-center text-gray-500">
             <thead className="text-[17px] text-black uppercase bg-gray-500">

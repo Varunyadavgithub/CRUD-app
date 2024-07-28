@@ -185,7 +185,7 @@ export default function Home() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="5" className="px-6 py-4">
+                    <td colSpan="5" className="px-6 py-4 text-black">
                       No users found.
                     </td>
                   </tr>
