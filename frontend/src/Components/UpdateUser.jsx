@@ -57,11 +57,11 @@ const UpdateUser = () => {
             Update User
           </h1>
           <div>
-            <label className="text-sm text-gray-500">Name:</label>
+            <label className="text-sm text-black font-semibold">Name:</label>
             <input
               type="text"
               name="name"
-              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-gray-300 rounded-md"
+              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-black rounded-md"
               placeholder="Enter your name"
               required
               value={inputData.name}
@@ -69,11 +69,11 @@ const UpdateUser = () => {
             />
           </div>
           <div>
-            <label className="text-sm text-gray-500">Email:</label>
+            <label className="text-sm text-black font-semibold">Email:</label>
             <input
               type="email"
               name="email"
-              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-gray-300 rounded-md"
+              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-black rounded-md"
               placeholder="Enter your email"
               required
               value={inputData.email}
@@ -81,11 +81,11 @@ const UpdateUser = () => {
             />
           </div>
           <div>
-            <label className="text-sm text-gray-500">Password:</label>
+            <label className="text-sm text-black font-semibold">Password:</label>
             <input
               type="password"
               name="password"
-              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-gray-300 rounded-md"
+              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-black rounded-md"
               placeholder="Enter your Password"
               required
               value={inputData.password}

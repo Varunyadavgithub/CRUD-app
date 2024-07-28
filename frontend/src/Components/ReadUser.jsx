@@ -22,7 +22,7 @@ const ReadUser = () => {
   return (
     <>
       <div className="p-4 md:w-1/2 mx-auto mt-3">
-        <div className="relative overflow-x-auto shadow-md">
+        <div className="relative overflow-x-auto shadow-md rounded-md">
           <table className="w-full text-lg text-center text-gray-500">
             <thead className="text-[17px] text-black uppercase bg-gray-500">
               <tr>
@@ -58,13 +58,13 @@ const ReadUser = () => {
                   <div className="flex gap-4 justify-center">
                     <Link
                       to={`/`}
-                      className="font-medium text-green-600 dark:text-blue-500 hover:underline"
+                      className="font-medium text-green-600 hover:underline"
                     >
                       Read
                     </Link>
                     <Link
                       to={`/`}
-                      className="font-medium text-yellow-400 dark:text-blue-500 hover:underline"
+                      className="font-medium text-yellow-400 hover:underline"
                     >
                       Edit
                     </Link>

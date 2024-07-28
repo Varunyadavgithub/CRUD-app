@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: #D6EFD8;
+  color: black;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);

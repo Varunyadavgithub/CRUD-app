@@ -75,11 +75,11 @@ export default function Home() {
             CRUD App
           </h1>
           <div>
-            <label className="text-sm text-gray-500">Name:</label>
+            <label className="text-sm text-black font-semibold">Name:</label>
             <input
               type="text"
               name="name"
-              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-gray-300 rounded-md"
+              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-black rounded-md"
               placeholder="Enter your name"
               required
               value={inputData.name}
@@ -87,11 +87,11 @@ export default function Home() {
             />
           </div>
           <div>
-            <label className="text-sm text-gray-500">Email:</label>
+            <label className="text-sm text-black font-semibold">Email:</label>
             <input
               type="email"
               name="email"
-              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-gray-300 rounded-md"
+              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-black rounded-md"
               placeholder="Enter your email"
               required
               value={inputData.email}
@@ -99,11 +99,11 @@ export default function Home() {
             />
           </div>
           <div>
-            <label className="text-sm text-gray-500">Password:</label>
+            <label className="text-sm text-black font-semibold">Password:</label>
             <input
               type="password"
               name="password"
-              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-gray-300 rounded-md"
+              className="block py-2.5 px-3 w-full text-sm bg-transparent border-2 border-black rounded-md"
               placeholder="Enter your Password"
               required
               value={inputData.password}
@@ -122,7 +122,7 @@ export default function Home() {
         {loading ? (
           <Spinner />
         ) : (
-          <div className="relative overflow-x-auto shadow-md">
+          <div className="relative overflow-x-auto shadow-md rounded-md">
             <table className="w-full text-lg text-center text-gray-500">
               <thead className="text-[17px] text-black uppercase bg-gray-500">
                 <tr>
@@ -163,13 +163,13 @@ export default function Home() {
                         <div className="flex gap-4 justify-center">
                           <Link
                             to={`/readuser/${user._id}`}
-                            className="font-medium text-green-600 dark:text-blue-500 hover:underline"
+                            className="font-medium text-green-600 hover:underline"
                           >
                             Read
                           </Link>
                           <Link
                             to={`/updateuser/${user._id}`}
-                            className="font-medium text-yellow-400 dark:text-blue-500 hover:underline"
+                            className="font-medium text-yellow-400 hover:underline"
                           >
                             Edit
                           </Link>
