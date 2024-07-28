@@ -157,7 +157,7 @@ export default function Home() {
                             Read
                           </Link>
                           <Link
-                            to={`/`}
+                            to={`/updateuser/${user._id}`}
                             className="font-medium text-yellow-400 dark:text-blue-500 hover:underline"
                           >
                             Edit
