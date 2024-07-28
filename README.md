@@ -1,6 +1,6 @@
-# CRUD Application 🌱
+# CRUD Application 
 
-## Description
+## 📌 Description
 
 This CRUD (Create, Read, Update, Delete) application is built using the MERN stack (MongoDB, Express.js, React.js, Node.js). 
 It allows users to perform basic operations on user data including creating new users, reading user details, updating user information, and deleting users.
@@ -12,7 +12,7 @@ It allows users to perform basic operations on user data including creating new 
 - **Update User**: Modify existing user information.
 - **Delete User**: Remove a user from the database.
 
-## Technologies Used
+## Tools & Technologies🛠️
 
 - **Frontend**: React.js
   - React Router for navigation
@@ -35,8 +35,8 @@ It allows users to perform basic operations on user data including creating new 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/crud-app.git
-   cd crud-app
+   git clone https://github.com/Varunyadavgithub/CRUD-app.git
+   cd crud-application
    ```
 
 2. Install backend dependencies:
@@ -120,5 +120,8 @@ crud-app/
 For any questions or feedback, please contact:
 - **Name**: Varun Yadav
 - **Email**: yadav.varun056038@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/varun-yadav-77152b251)
 - **GitHub**: [Your GitHub Profile](https://github.com/Varunyadavgithub)
+
+ Happy Learning 🌱
+ Happy Coding 💖
