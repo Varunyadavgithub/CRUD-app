@@ -151,7 +151,7 @@ export default function Home() {
                       <td className="px-6 py-4">
                         <div className="flex gap-4 justify-center">
                           <Link
-                            to={`/`}
+                            to={`/readuser/${user._id}`}
                             className="font-medium text-green-600 dark:text-blue-500 hover:underline"
                           >
                             Read
