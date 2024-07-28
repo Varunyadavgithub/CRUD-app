@@ -56,6 +56,17 @@ export default function Home() {
     }
     fetchAllUser();
   };
+
+  const handleDelete=async (id)=>{
+    try {
+      const res=await axios.delete(`http://localhost:3000/api/v1/user/delete/${id}`);
+      if (res.status==200) {
+        fetchAllUser()
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   return (
     <>
       <div className="p-4 md:w-1/2 mx-auto mt-3">
@@ -162,7 +173,10 @@ export default function Home() {
                           >
                             Edit
                           </Link>
-                          <button className="font-medium text-red-500 hover:underline">
+                          <button
+                            className="font-medium text-red-500 hover:underline"
+                            onClick={() => handleDelete(user._id)}
+                          >
                             Delete
                           </button>
                         </div>
