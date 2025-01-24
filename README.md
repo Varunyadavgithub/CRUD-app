@@ -209,7 +209,7 @@ Both services can be run concurrently on different terminals or within Docker co
 For any questions or feedback, please contact:
 
 - **Name**: Varun Yadav
-- **Email**: yadav.varun056038@example.com
+- **Email**: yadav.varun056038@gmail.com
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/varun-yadav-77152b251)
 - **GitHub**: [GitHub Profile](https://github.com/Varunyadavgithub)
 
