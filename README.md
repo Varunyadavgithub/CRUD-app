@@ -1,9 +1,11 @@
-## **CRUD Application (MERN Stack)**
----
+# CRUD Application (MERN Stack)**
 
 ## 📌 Project Overview
 
 This is a **CRUD** (Create, Read, Update, Delete) application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It allows users to perform basic operations on user data, including creating new users, viewing user details, updating user information, and deleting users. This project also leverages Docker for containerization, making it easier to deploy and manage the application.
+
+# 📸Screenshot
+![Screenshot 2025-01-24 121110](https://github.com/user-attachments/assets/4f64781b-c66d-4969-aef0-0f2313c929b9)
 
 ## Features
 
