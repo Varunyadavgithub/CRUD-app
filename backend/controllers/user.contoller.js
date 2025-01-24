@@ -42,7 +42,7 @@ export const getUser = async (req, res, next) => {
   }
 };
 
-export const getAllUsers = async (req, res) => {
+export const getAllUsers = async (req, res, next) => {
   try {
     const users = await User.find({});
     const totalUsers = await User.countDocuments();
