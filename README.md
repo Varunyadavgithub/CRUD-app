@@ -1,4 +1,4 @@
-# CRUD Application (MERN Stack)**
+# CRUD Application (MERN Stack)
 
 ## 📌 Project Overview
 
