@@ -210,8 +210,8 @@ For any questions or feedback, please contact:
 
 - **Name**: Varun Yadav
 - **Email**: yadav.varun056038@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/varun-yadav-77152b251)
-- **GitHub**: [Your GitHub Profile](https://github.com/Varunyadavgithub)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/varun-yadav-77152b251)
+- **GitHub**: [GitHub Profile](https://github.com/Varunyadavgithub)
 
 Happy Learning 🌱  
 Happy Coding 💖
