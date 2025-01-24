@@ -1,25 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
-import mongoose from "mongoose";
 import userRoutes from "./routes/user.route.js";
 import cors from "cors";
+import { connectDB } from "./utils/connect_db.js";
 
 const app = express();
 dotenv.config();
 app.use(cors());
-// db connection
-mongoose
-  .connect(process.env.DB_URI)
-  .then(() => {
-    console.log("Database connected successfully!");
-  })
-  .catch((error) => {
-    console.log(`Error while connecting to the database ${error}`);
-  });
+connectDB();
 
-// Middleware to parse JSON bodies
 app.use(express.json());
-// Middleware to parse URL-encoded bodies
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
@@ -30,5 +20,4 @@ app.listen(process.env.PORT, () => {
   console.log(`Server is running on port: ${process.env.PORT}`);
 });
 
-// routes (APIs)
 app.use("/api/v1/user", userRoutes);

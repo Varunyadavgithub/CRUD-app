@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Expose the backend on port 3000
+    env_file:
+      - ./backend/.env # Load environment variables for the backend
+    depends_on:
+      - mongo # Ensure MongoDB starts before the backend
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173" # Expose the frontend on port 5173
+    env_file:
+      - ./frontend/.env # Load environment variables for the frontend
+    depends_on:
+      - backend # Ensure the backend is running before starting the frontend
+    networks:
+      - app-network
+
+  mongo:
+    image: mongo # Use the official MongoDB image
+    container_name: mongo # Name the MongoDB container
+    ports:
+      - "27017:27017" # Expose MongoDB on port 27017
+    volumes:
+      - mongo-data:/data/db # Persist MongoDB data
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:
+    # Named volume to persist MongoDB data
+
+networks:
+  app-network: # Shared network for all services
