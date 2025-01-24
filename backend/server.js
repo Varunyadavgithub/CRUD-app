@@ -6,8 +6,16 @@ import { connectDB } from "./utils/connect_db.js";
 
 const app = express();
 dotenv.config();
-app.use(cors());
 connectDB();
+
+const frontendURL = process.env.FRONTEND_URL;
+app.use(
+  cors({
+    origin: frontendURL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

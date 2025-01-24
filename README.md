@@ -2,9 +2,10 @@
 
 ## 📌 Project Overview
 
-This is a **CRUD** (Create, Read, Update, Delete) application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It allows users to perform basic operations on user data, including creating new users, viewing user details, updating user information, and deleting users. This project also leverages Docker for containerization, making it easier to deploy and manage the application.
+This is a **CRUD** (Create, Read, Update, Delete) application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It allows users to perform basic operations on user data, including creating new users, viewing user details, updating user information, and deleting users. This project also leverages Docker for containerization, making it easier to deploy and manage the application. The application is deployed on **Vercel** (Frontend) and **Render** (Backend).
 
-# 📸Screenshot
+## 📸 Screenshot
+
 ![Screenshot 2025-01-24 121110](https://github.com/user-attachments/assets/4f64781b-c66d-4969-aef0-0f2313c929b9)
 
 ## Features
@@ -15,6 +16,7 @@ This is a **CRUD** (Create, Read, Update, Delete) application built using the **
 - **Delete User**: Remove a user from the database.
 - **Responsive UI**: The application is designed with a user-friendly interface using React and styled with Tailwind CSS.
 - **Backend API**: Built with Node.js and Express.js, providing secure and efficient communication between the frontend and the MongoDB database.
+- **CORS Configuration**: Allows frontend hosted on Vercel to communicate securely with the backend hosted on Render.
 
 ## Tools & Technologies🛠️
 
@@ -36,6 +38,8 @@ This is a **CRUD** (Create, Read, Update, Delete) application built using the **
 
 - **Docker**: Containerizes both the frontend and backend services for easy deployment and management.
 - **MongoDB Atlas**: Cloud-hosted MongoDB for seamless and secure database management.
+- **Render**: Backend deployment platform.
+- **Vercel**: Frontend deployment platform.
 
 ### Optional Tools:
 
@@ -72,6 +76,7 @@ cd CRUD-app
   ```env
   DB_URI=your_mongo_database_uri
   PORT=3000
+  FRONTEND_URL=your_frontend_url
   ```
 
 - Start the backend server:
@@ -210,5 +215,3 @@ For any questions or feedback, please contact:
 
 Happy Learning 🌱  
 Happy Coding 💖
-
----
